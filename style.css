@@ -1,536 +1,259 @@
-:root {
-  --orange: #f28c28;
-  --orange-dark: #d86a10;
-  --orange-soft: #ffbb67;
-  --black: #111111;
-  --white: #ffffff;
-  --gray: #f3f1ee;
-  --text: #2d2d2d;
-  --muted: #5f5a54;
-  --line: rgba(17, 17, 17, 0.1);
-  --shadow: 0 22px 45px rgba(17, 17, 17, 0.12);
-}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Café Varanda em Caieiras. Salgados, cafés, bebidas geladas e entregas acima de 100 salgados." />
+  <title>Café Varanda | Caieiras</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container nav-bar">
+      <a href="#inicio" class="brand" aria-label="Início">
+        <span class="brand-mark">CV</span>
+        <span>Café Varanda</span>
+      </a>
 
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body {
-  margin: 0;
-  font-family: "Inter", Arial, sans-serif;
-  color: var(--black);
-  background: var(--white);
-  line-height: 1.6;
-}
+      <nav class="nav-links" aria-label="Menu principal">
+        <a href="#sobre">Sobre</a>
+        <a href="#cardapio">Cardápio</a>
+        <a href="#entregas">Entregas</a>
+        <a href="#contato">Contato</a>
+      </nav>
 
-a { color: inherit; text-decoration: none; }
-img { display: block; max-width: 100%; }
-button, input, textarea { font: inherit; }
-.container { width: min(1160px, calc(100% - 32px)); margin: 0 auto; }
+      <a href="#cardapio" class="btn btn-primary">Ver cardápio</a>
+    </div>
+  </header>
 
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border: none;
-  border-radius: 999px;
-  padding: 15px 26px;
-  font-weight: 700;
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-.btn:hover { transform: translateY(-2px); }
+  <main id="inicio">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Café e salgados em Caieiras</span>
+          <h1>Pequenas quantitudes, sabor premium.</h1>
+          <p>
+            Salgados preparados com atenção, cafés quentinhos e bebidas geladas. Para grandes pedidos, fazemos entregas acima de 100 salgados.
+          </p>
 
-.btn-primary {
-  background: linear-gradient(135deg, var(--orange), var(--orange-dark));
-  color: var(--white);
-  box-shadow: 0 20px 38px rgba(242, 140, 40, 0.25);
-}
+          <div class="hero-actions">
+            <a href="#cardapio" class="btn btn-primary">Montar pedido</a>
+            <a href="#contato" class="btn btn-light">Falar conosco</a>
+          </div>
 
-.btn-light {
-  background: rgba(255, 255, 255, 0.14);
-  color: var(--white);
-  border: 1px solid rgba(255,255,255,0.2);
-}
+          <div class="hero-stats">
+            <div>
+              <strong>100+</strong>
+              <span>salgados para entrega</span>
+            </div>
+            <div>
+              <strong>R$ 8</strong>
+              <span>cafés a partir</span>
+            </div>
+            <div>
+              <strong>7h-22h</strong>
+              <span>todos os dias</span>
+            </div>
+          </div>
+        </div>
 
-.header {
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  backdrop-filter: blur(10px);
-  background: rgba(17,17,17,0.9);
-  border-bottom: 1px solid rgba(255,255,255,0.08);
-}
+        <div class="hero-visual">
+          <div class="glass-panel">
+            <div class="panel-top">
+              <span>Mais pedidos</span>
+              <span class="dots"><i></i><i></i><i></i></span>
+            </div>
 
-.nav-bar {
-  min-height: 78px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 18px;
-}
+            <div class="mini-menu">
+              <div class="mini-item">
+                <span>Coxinha</span>
+                <strong>R$ 12,00</strong>
+              </div>
+              <div class="mini-item">
+                <span>Café expresso</span>
+                <strong>R$ 6,00</strong>
+              </div>
+              <div class="mini-item">
+                <span>Pão de queijo</span>
+                <strong>R$ 10,00</strong>
+              </div>
+              <div class="mini-item">
+                <span>Refrigerante lata</span>
+                <strong>R$ 8,00</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--white);
-}
+    <div class="info-bar">
+      <div class="container info-grid">
+        <div class="info-item">
+          <span class="info-icon">⏰</span>
+          <div>
+            <small>Horário</small>
+            <strong>Seg a Dom • 7h às 22h</strong>
+          </div>
+        </div>
 
-.brand-mark {
-  display: grid;
-  place-items: center;
-  width: 42px;
-  height: 42px;
-  border-radius: 12px;
-  background: linear-gradient(135deg, var(--orange), var(--orange-soft));
-  color: var(--black);
-}
+        <div class="info-item">
+          <span class="info-icon">📍</span>
+          <div>
+            <small>Localização</small>
+            <strong>Caieiras - SP</strong>
+          </div>
+        </div>
 
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 28px;
-  color: rgba(255, 255, 255, 0.8);
-  font-weight: 600;
-}
-.nav-links a:hover { color: var(--white); }
+        <div class="info-item">
+          <span class="info-icon">📦</span>
+          <div>
+            <small>Entregas</small>
+            <strong>Acima de 100 salgados</strong>
+          </div>
+        </div>
+      </div>
+    </div>
 
-.hero {
-  padding: 110px 0 80px;
-  background:
-    linear-gradient(135deg, rgba(17,17,17,0.8), rgba(17,17,17,0.72)),
-    url("https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1400&q=80") center/cover no-repeat;
-  color: #fff;
-}
+    <section class="section about" id="sobre">
+      <div class="container about-grid">
+        <div class="about-media">
+          <div class="badge-box">
+            <span>Pedido mínimo para entrega</span>
+            <strong>100+</strong>
+          </div>
+        </div>
 
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 38px;
-  align-items: center;
-}
+        <div class="about-copy">
+          <span class="eyebrow eyebrow-dark">Sobre nós</span>
+          <h2>O sabor certo para pequenas pausas e grandes pedidos.</h2>
+          <p>
+            O Café Varanda atende você em pequenas quantidades no dia a dia e também prepara encomendas de salgados para festas, reuniões e empresas.
+          </p>
+          <p>
+            As entregas são realizadas para pedidos acima de 100 salgados. Consulte disponibilidade, sabores e prazo pelo WhatsApp.
+          </p>
 
-.eyebrow {
-  display: inline-flex;
-  align-items: center;
-  border: 1px solid rgba(255, 187, 103, 0.4);
-  border-radius: 999px;
-  background: rgba(242, 140, 40, 0.12);
-  color: var(--orange-soft);
-  padding: 8px 14px;
-  font-size: 0.76rem;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
+          <ul class="feature-list">
+            <li><span>✓</span> Venda em pequenas quantidades</li>
+            <li><span>✓</span> Encomendas acima de 100 salgados</li>
+            <li><span>✓</span> Cafés preparados na hora</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-.eyebrow-dark {
-  color: var(--orange-dark);
-  background: rgba(242, 140, 40, 0.08);
-  border-color: rgba(242, 140, 40, 0.18);
-}
+    <section class="section menu-section" id="cardapio">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow eyebrow-dark">Cardápio interativo</span>
+          <h2>Escolha uma categoria</h2>
+          <p>Veja as opções e clique em “Adicionar” para montar uma prévia do seu pedido.</p>
+        </div>
 
-.hero-copy h1 {
-  margin: 16px 0 18px;
-  font-size: clamp(2.9rem, 5vw, 5.2rem);
-  line-height: 0.96;
-  letter-spacing: -0.06em;
-}
+        <div class="category-tabs" role="tablist">
+          <button class="category-tab active" data-category="salgados">Salgados</button>
+          <button class="category-tab" data-category="cafes">Cafés</button>
+          <button class="category-tab" data-category="bebidas">Refrigerantes</button>
+        </div>
 
-.hero-copy p {
-  max-width: 620px;
-  margin: 0 0 28px;
-  color: rgba(255,255,255,0.84);
-  font-size: 1.08rem;
-}
+        <div class="interactive-layout">
+          <div class="products-grid" id="productsGrid"></div>
 
-.hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
-  margin-bottom: 30px;
-}
+          <aside class="order-summary">
+            <div class="summary-header">
+              <span>Seu pedido</span>
+              <strong id="orderCount">0 itens</strong>
+            </div>
 
-.hero-stats {
-  display: flex;
-  gap: 30px;
-  flex-wrap: wrap;
-}
+            <div id="orderItems" class="order-items">
+              <p>Adicione itens do cardápio.</p>
+            </div>
 
-.hero-stats div { min-width: 120px; }
-.hero-stats strong {
-  display: block;
-  font-size: 1.8rem;
-  line-height: 1;
-}
-.hero-stats span {
-  display: block;
-  margin-top: 6px;
-  color: rgba(255,255,255,0.7);
-  font-size: 0.85rem;
-}
+            <div class="order-total">
+              <span>Total estimado</span>
+              <strong id="orderTotal">R$ 0,00</strong>
+            </div>
 
-.hero-visual { display: flex; justify-content: center; }
-.glass-panel {
-  width: min(100%, 440px);
-  padding: 22px;
-  border: 1px solid rgba(255,255,255,0.14);
-  border-radius: 28px;
-  background: rgba(255,255,255,0.05);
-  box-shadow: var(--shadow);
-  backdrop-filter: blur(8px);
-}
+            <a class="btn btn-primary whatsapp-order" href="https://wa.me/5511987654321?text=Ol%C3%A1%2C%20quero%20fazer%20um%20pedido%20no%20Caf%C3%A9%20Varanda." target="_blank" rel="noopener noreferrer">Enviar pelo WhatsApp</a>
+          </aside>
+        </div>
 
-.panel-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 18px;
-  color: rgba(255,255,255,0.85);
-}
+        <p class="menu-note">* Valores sugeridos com base no cardápio apresentado. Confirme preços, sabores e disponibilidade diretamente com o Café Varanda.</p>
+      </div>
+    </section>
 
-.dots { display: flex; gap: 8px; }
-.dots i {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  display: inline-block;
-}
-.dots i:nth-child(1) { background: #ff5f57; }
-.dots i:nth-child(2) { background: #ffbd2e; }
-.dots i:nth-child(3) { background: #28c840; }
+    <section class="section delivery-section" id="entregas">
+      <div class="container delivery-box">
+        <div>
+          <span class="eyebrow eyebrow-dark">Encomendas</span>
+          <h2>Precisa de muitos salgados?</h2>
+          <p>Fazemos entregas para pedidos acima de 100 salgados. Ideal para festas, reuniões e empresas.</p>
+        </div>
 
-.mini-menu {
-  background: rgba(17,17,17,0.82);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 16px;
-  padding: 16px 18px;
-}
+        <a class="btn btn-primary" href="https://wa.me/5511987654321?text=Ol%C3%A1%2C%20quero%20fazer%20uma%20encomenda%20com%20mais%20de%20100%20salgados." target="_blank" rel="noopener noreferrer">Solicitar orçamento</a>
+      </div>
+    </section>
 
-.mini-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 18px;
-  padding: 14px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.08);
-}
-.mini-item:last-child { border-bottom: none; }
-.mini-item span { font-weight: 600; }
-.mini-item strong { color: var(--orange-soft); }
+    <section class="section contact-section" id="contato">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow eyebrow-dark">Contato</span>
+          <h2>Fale com o Café Varanda</h2>
+        </div>
 
-.info-bar {
-  background: var(--black);
-  color: var(--white);
-  padding: 18px 0;
-}
+        <div class="contact-grid">
+          <div class="contact-card info-card">
+            <h3>Informações</h3>
+            <ul>
+              <li>📍 Caieiras - SP</li>
+              <li>📞 (11) 98765-4321</li>
+              <li>⏰ Segunda a domingo • 7h às 22h</li>
+              <li>📦 Entregas acima de 100 salgados</li>
+            </ul>
+          </div>
 
-.info-grid {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 18px;
-  flex-wrap: wrap;
-}
+          <div class="contact-card form-card">
+            <h3>Envie uma mensagem</h3>
+            <form id="contactForm">
+              <label>
+                Nome
+                <input required type="text" placeholder="Seu nome" />
+              </label>
 
-.info-item { display: flex; align-items: center; gap: 12px; }
-.info-icon {
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  background: rgba(242,140,40,0.12);
-  color: var(--orange-soft);
-}
-.info-item small {
-  display: block;
-  opacity: 0.7;
-  margin-bottom: 2px;
-}
-.info-item strong { font-size: 0.96rem; }
+              <label>
+                Telefone
+                <input required type="tel" placeholder="(11) 99999-9999" />
+              </label>
 
-.section { padding: 100px 0; }
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 32px;
-  align-items: center;
-}
+              <label>
+                Mensagem
+                <textarea required rows="4" placeholder="Conte o que você precisa..."></textarea>
+              </label>
 
-.about-media {
-  min-height: 430px;
-  border-radius: 30px;
-  background:
-    linear-gradient(135deg, rgba(242,140,40,0.18), rgba(17,17,17,0.75)),
-    url("https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1200&q=80") center/cover no-repeat;
-  position: relative;
-  box-shadow: var(--shadow);
-}
+              <button type="submit" class="btn btn-primary">Enviar pelo WhatsApp</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-.badge-box {
-  position: absolute;
-  right: 24px;
-  bottom: 24px;
-  background: rgba(17,17,17,0.92);
-  color: var(--white);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 18px;
-  padding: 18px 20px;
-}
-.badge-box span { display: block; opacity: 0.8; }
-.badge-box strong {
-  display: block;
-  font-size: 2.1rem;
-  line-height: 1.1;
-  margin-top: 8px;
-}
+  <a class="whatsapp-float" href="https://wa.me/5511987654321" target="_blank" rel="noopener noreferrer" aria-label="Falar pelo WhatsApp">WhatsApp</a>
 
-.about-copy h2 {
-  margin: 18px 0 16px;
-  font-size: clamp(2.2rem, 3vw, 3.2rem);
-  line-height: 1.08;
-  letter-spacing: -0.05em;
-}
-.about-copy p { margin: 0 0 16px; color: var(--text); }
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="brand">
+        <span class="brand-mark">CV</span>
+        <span>Café Varanda</span>
+      </div>
+      <span>© 2026 Café Varanda. Todos os direitos reservados.</span>
+    </div>
+  </footer>
 
-.feature-list {
-  list-style: none;
-  padding: 0;
-  margin: 24px 0 0;
-  display: grid;
-  gap: 14px;
-  color: var(--text);
-  font-weight: 600;
-}
-.feature-list li { display: flex; align-items: center; gap: 12px; }
-.feature-list span {
-  display: inline-grid;
-  place-items: center;
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
-  background: rgba(242, 140, 40, 0.12);
-  color: var(--orange-dark);
-}
-
-.menu-section { background: var(--gray); }
-.section-heading { text-align: center; margin-bottom: 46px; }
-.section-heading h2 {
-  margin: 18px 0 0;
-  font-size: clamp(2.3rem, 3vw, 3.2rem);
-  line-height: 1.08;
-  letter-spacing: -0.05em;
-}
-.section-heading p {
-  margin: 12px auto 0;
-  max-width: 740px;
-  color: var(--muted);
-}
-
-.category-tabs {
-  display: flex;
-  gap: 12px;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-bottom: 24px;
-}
-.category-tab {
-  border: 1px solid var(--line);
-  background: var(--white);
-  color: var(--black);
-  border-radius: 999px;
-  padding: 11px 18px;
-  font-weight: 700;
-  cursor: pointer;
-  transition: 0.2s ease;
-}
-.category-tab.active {
-  background: linear-gradient(135deg, var(--orange), var(--orange-dark));
-  color: var(--white);
-  border-color: transparent;
-}
-
-.interactive-layout {
-  display: grid;
-  grid-template-columns: 1.5fr 0.8fr;
-  gap: 24px;
-}
-
-.products-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
-}
-
-.product-card {
-  background: var(--white);
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  padding: 18px;
-  box-shadow: var(--shadow);
-}
-.product-card h3 { margin: 0 0 8px; font-size: 1.25rem; }
-.product-card p { margin: 0 0 14px; color: var(--muted); }
-.product-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 12px;
-}
-.product-price { color: var(--orange-dark); font-weight: 800; }
-.product-add {
-  border: none;
-  border-radius: 999px;
-  background: rgba(242, 140, 40, 0.1);
-  color: var(--orange-dark);
-  padding: 9px 14px;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-.order-summary {
-  background: var(--white);
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  padding: 20px;
-  box-shadow: var(--shadow);
-  position: sticky;
-  top: 120px;
-}
-.summary-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 16px;
-  margin-bottom: 18px;
-}
-.summary-header span, .summary-header strong { font-size: 1rem; }
-.order-items {
-  min-height: 110px;
-  display: grid;
-  gap: 8px;
-  color: var(--muted);
-}
-.order-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 12px;
-  padding: 8px 0;
-  border-bottom: 1px solid var(--line);
-}
-.order-total {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 12px;
-  margin-top: 14px;
-  margin-bottom: 18px;
-  font-weight: 700;
-}
-.whatsapp-order { width: 100%; }
-.menu-note { margin-top: 18px; color: var(--muted); }
-
-.delivery-box {
-  background: linear-gradient(180deg, #fff, #f9f5f1);
-  border: 1px solid var(--line);
-  border-radius: 24px;
-  box-shadow: var(--shadow);
-  padding: 28px 24px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-.delivery-box h2 {
-  margin: 0 0 8px;
-  font-size: clamp(2rem, 3vw, 2.6rem);
-  line-height: 1.08;
-  letter-spacing: -0.05em;
-}
-.delivery-box p { margin: 0; color: var(--muted); }
-
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
-}
-.contact-card {
-  background: var(--white);
-  border: 1px solid var(--line);
-  border-radius: 24px;
-  box-shadow: var(--shadow);
-  padding: 28px 24px;
-}
-.contact-card h3 { margin: 0 0 18px; font-size: 1.7rem; }
-.info-card ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: grid;
-  gap: 18px;
-  color: var(--text);
-}
-.info-card li { display: flex; align-items: flex-start; gap: 12px; }
-.form-card form { display: grid; gap: 16px; }
-.form-card label {
-  display: grid;
-  gap: 8px;
-  font-weight: 700;
-}
-.form-card input, .form-card textarea {
-  width: 100%;
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  background: var(--white);
-  color: var(--black);
-  padding: 14px 16px;
-  resize: vertical;
-}
-.form-card input:focus, .form-card textarea:focus {
-  outline: none;
-  border-color: var(--orange);
-  box-shadow: 0 0 0 3px rgba(242,140,40,.12);
-}
-
-.whatsapp-float {
-  position: fixed;
-  right: 22px;
-  bottom: 22px;
-  z-index: 50;
-  background: linear-gradient(135deg, #25d366, #128c7e);
-  color: var(--white);
-  padding: 14px 18px;
-  border-radius: 999px;
-  font-weight: 700;
-  box-shadow: 0 20px 35px rgba(18,140,126,0.25);
-}
-
-.footer {
-  background: var(--black);
-  color: var(--white);
-  padding: 28px 0;
-}
-.footer-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 18px;
-  flex-wrap: wrap;
-}
-
-@media (max-width: 980px) {
-  .interactive-layout, .hero-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; }
-  .nav-links { display: none; }
-}
-
-@media (max-width: 560px) {
-  .hero { padding-top: 90px; }
-  .hero-actions { flex-direction: column; align-items: stretch; }
-  .hero-actions .btn { width: 100%; }
-  .delivery-box { align-items: flex-start; }
-}
+  <script src="menu.js"></script>
+</body>
+</html>
