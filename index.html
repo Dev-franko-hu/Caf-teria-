@@ -1,322 +1,52 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Café Varanda em Caieiras. Salgados, doces e refrigerantes em um ambiente premium e acolhedor."
-    />
-    <title>Café Varanda | Caieiras</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header class="header">
-      <div class="container nav-bar">
-        <a href="#inicio" class="brand" aria-label="Início">
-          <span class="brand-mark">CV</span>
-          <span class="brand-name">Café Varanda</span>
-        </a>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Café Varanda em Caieiras: salgados, cafés e refrigerantes.">
+  <title>Café Varanda | Caieiras</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container nav-bar">
+      <a href="#inicio" class="brand"><span class="brand-mark">CV</span><span>Café Varanda</span></a>
+      <nav class="nav-links"><a href="#sobre">Sobre</a><a href="#cardapio">Cardápio</a><a href="#entregas">Entregas</a><a href="#contato">Contato</a></nav>
+      <a href="#cardapio" class="btn btn-primary">Ver cardápio</a>
+    </div>
+  </header>
 
-        <nav class="nav-links" aria-label="Menu principal">
-          <a href="#sobre">Sobre</a>
-          <a href="#cardapio">Cardápio</a>
-          <a href="#promocoes">Promoções</a>
-          <a href="#contato">Contato</a>
-        </nav>
-
-        <div class="nav-actions">
-          <a href="#contato" class="btn btn-primary">Peça agora</a>
+  <main id="inicio">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Café e salgados em Caieiras</span>
+          <h1>Pequenas quantidades, muito sabor.</h1>
+          <p>Salgados preparados para o seu momento, cafés quentinhos e bebidas geladas. Para grandes pedidos, fazemos entregas acima de 100 salgados.</p>
+          <div class="hero-actions"><a href="#cardapio" class="btn btn-primary">Montar pedido</a><a href="#contato" class="btn btn-light">Falar conosco</a></div>
+          <div class="hero-stats"><div><strong>100+</strong><span>salgados para entrega</span></div><div><strong>R$ 8</strong><span>cafés a partir</span></div><div><strong>7h–22h</strong><span>todos os dias</span></div></div>
         </div>
+        <div class="hero-visual"><div class="glass-panel"><div class="panel-top"><span>Mais pedidos</span><span class="dots"><i></i><i></i><i></i></span></div><div class="mini-menu"><div class="mini-item"><span>Coxinha</span><strong>R$ 12,00</strong></div><div class="mini-item"><span>Café expresso</span><strong>R$ 6,00</strong></div><div class="mini-item"><span>Pão de queijo</span><strong>R$ 10,00</strong></div><div class="mini-item"><span>Refrigerante lata</span><strong>R$ 8,00</strong></div></div></div></div>
       </div>
-    </header>
+    </section>
 
-    <main id="inicio">
-      <section class="hero">
-        <div class="container hero-grid">
-          <div class="hero-copy">
-            <span class="eyebrow">Café premium em Caieiras</span>
-            <h1>Um café para momentos que merecem sabor.</h1>
-            <p>
-              Salgados, doces e refrigerantes em um ambiente acolhedor, moderno e
-              cheio de personalidade. O Café Varanda une qualidade, sabor e bom atendimento.
-            </p>
+    <div class="info-bar"><div class="container info-grid"><div class="info-item"><span class="info-icon">⏰</span><div><small>Horário</small><strong>Seg a Dom • 7h às 22h</strong></div></div><div class="info-item"><span class="info-icon">📍</span><div><small>Localização</small><strong>Caieiras - SP</strong></div></div><div class="info-item"><span class="info-icon">📦</span><div><small>Entregas</small><strong>Acima de 100 salgados</strong></div></div></div></div>
 
-            <div class="hero-actions">
-              <a href="#cardapio" class="btn btn-primary">Ver cardápio</a>
-              <a href="#contato" class="btn btn-light">Falar conosco</a>
-            </div>
+    <section class="section about" id="sobre"><div class="container about-grid"><div class="about-media"><div class="badge-box"><span>Pedido mínimo para entrega</span><strong>100+</strong></div></div><div class="about-copy"><span class="eyebrow eyebrow-dark">Sobre nós</span><h2>O sabor certo para pequenas pausas e grandes pedidos.</h2><p>O Café Varanda atende você em pequenas quantidades no dia a dia e também prepara encomendas de salgados para festas, empresas e eventos.</p><p>As entregas são realizadas para pedidos acima de 100 salgados. Consulte disponibilidade, sabores e prazo pelo WhatsApp.</p><ul class="feature-list"><li><span>✓</span> Venda em pequenas quantidades</li><li><span>✓</span> Encomendas acima de 100 salgados</li><li><span>✓</span> Cafés preparados na hora</li></ul></div></div></section>
 
-            <div class="hero-stats">
-              <div>
-                <strong>15+</strong>
-                <span>opções</span>
-              </div>
-              <div>
-                <strong>R$ 8</strong>
-                <span>início</span>
-              </div>
-              <div>
-                <strong>4.9★</strong>
-                <span>avaliação</span>
-              </div>
-            </div>
-          </div>
+    <section class="section menu-section" id="cardapio"><div class="container"><div class="section-heading"><span class="eyebrow eyebrow-dark">Cardápio interativo</span><h2>Escolha uma categoria</h2><p>Veja as opções e clique em “Adicionar” para montar uma prévia do seu pedido.</p></div><div class="category-tabs" role="tablist"><button class="category-tab active" data-category="salgados">Salgados</button><button class="category-tab" data-category="cafes">Cafés</button><button class="category-tab" data-category="bebidas">Refrigerantes</button></div><div class="interactive-layout"><div class="products-grid" id="productsGrid"></div><aside class="order-summary"><div><span>Seu pedido</span><strong id="orderCount">0 itens</strong></div><div id="orderItems" class="order-items"><p>Adicione itens do cardápio.</p></div><div class="order-total"><span>Total estimado</span><strong id="orderTotal">R$ 0,00</strong></div><a class="btn btn-primary whatsapp-order" href="https://wa.me/5511987654321" target="_blank" rel="noopener">Enviar pelo WhatsApp</a></aside></div><p class="menu-note">* Valores sugeridos com base no cardápio apresentado. Confirme preços, sabores e disponibilidade diretamente com o Café Varanda.</p></div></section>
 
-          <div class="hero-visual">
-            <div class="glass-panel">
-              <div class="panel-top">
-                <span>Especial do dia</span>
-                <span class="dots"><i></i><i></i><i></i></span>
-              </div>
+    <section class="section delivery-section" id="entregas"><div class="container delivery-box"><div><span class="eyebrow eyebrow-dark">Encomendas</span><h2>Precisa de muitos salgados?</h2><p>Fazemos entregas para pedidos acima de 100 salgados. Ideal para festas, reuniões e empresas.</p></div><a class="btn btn-primary" href="https://wa.me/5511987654321?text=Ol%C3%A1%2C%20quero%20fazer%20uma%20encomenda%20com%20mais%20de%20100%20salgados." target="_blank" rel="noopener">Solicitar orçamento</a></div></section>
 
-              <div class="mini-menu">
-                <div class="mini-item">
-                  <span>Cachorro-quente</span>
-                  <strong>R$ 18,00</strong>
-                </div>
-                <div class="mini-item">
-                  <span>Pão de queijo</span>
-                  <strong>R$ 10,00</strong>
-                </div>
-                <div class="mini-item">
-                  <span>Sonho</span>
-                  <strong>R$ 14,00</strong>
-                </div>
-                <div class="mini-item">
-                  <span>Refrigerante</span>
-                  <strong>R$ 8,00</strong>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+    <section class="section contact-section" id="contato"><div class="container"><div class="section-heading"><span class="eyebrow eyebrow-dark">Contato</span><h2>Fale com o Café Varanda</h2></div><div class="contact-grid"><div class="contact-card info-card"><h3>Informações</h3><ul><li>📍 Caieiras - SP</li><li>📞 (11) 98765-4321</li><li>⏰ Segunda a domingo • 7h às 22h</li><li>📦 Entregas acima de 100 salgados</li></ul></div><div class="contact-card form-card"><h3>Envie uma mensagem</h3><form id="contactForm"><label>Nome<input required type="text" placeholder="Seu nome"></label><label>Telefone<input required type="tel" placeholder="(11) 99999-9999"></label><label>Mensagem<textarea required rows="4" placeholder="Conte o que você precisa..."></textarea></label><button type="submit" class="btn btn-primary">Enviar pelo WhatsApp</button></form></div></div></div></section>
+  </main>
 
-      <div class="info-bar">
-        <div class="container info-grid">
-          <div class="info-item">
-            <span class="info-icon">⏰</span>
-            <div>
-              <small>Horário</small>
-              <strong>Seg a Dom • 7h às 22h</strong>
-            </div>
-          </div>
-
-          <div class="info-item">
-            <span class="info-icon">📍</span>
-            <div>
-              <small>Localização</small>
-              <strong>Caieiras - SP</strong>
-            </div>
-          </div>
-
-          <div class="info-item">
-            <span class="info-icon">📞</span>
-            <div>
-              <small>Contato</small>
-              <strong>(11) 98765-4321</strong>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <section class="section about" id="sobre">
-        <div class="container about-grid">
-          <div class="about-media">
-            <div class="badge-box">
-              <span>Clientes por mês</span>
-              <strong>+500</strong>
-            </div>
-          </div>
-
-          <div class="about-copy">
-            <span class="eyebrow eyebrow-dark">Sobre nós</span>
-            <h2>Um ambiente acolhedor para realçar o sabor da sua pausa.</h2>
-            <p>
-              Mais do que um café, o Café Varanda é um espaço para reunir bons momentos,
-              conversar com quem você ama e aproveitar uma experiência saborosa com qualidade em cada detalhe.
-            </p>
-            <p>
-              Nossa proposta é simples: oferecer salgados, doces e bebidas geladas com excelência,
-              em um ambiente que combina café, conforto e estilo.
-            </p>
-
-            <ul class="feature-list">
-              <li><span>✓</span> Ambiente acolhedor e familiar</li>
-              <li><span>✓</span> Cardápio com salgados e doces</li>
-              <li><span>✓</span> Atendimento rápido e cordial</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section class="section menu-section" id="cardapio">
-        <div class="container">
-          <div class="section-heading">
-            <span class="eyebrow eyebrow-dark">Cardápio</span>
-            <h2>Delícias para todos os gostos</h2>
-          </div>
-
-          <div class="menu-grid">
-            <article class="menu-card">
-              <div class="menu-image menu-salgados"></div>
-              <div class="menu-body">
-                <div class="menu-header">
-                  <h3>Salgados</h3>
-                  <span>R$ 10 a R$ 26</span>
-                </div>
-                <p>Quentinhos, crocantes e perfeitos para qualquer hora do dia.</p>
-                <ul>
-                  <li><span>Coxinha</span><strong>R$ 12,00</strong></li>
-                  <li><span>Pastel de queijo</span><strong>R$ 14,00</strong></li>
-                  <li><span>Pão de queijo</span><strong>R$ 10,00</strong></li>
-                  <li><span>Esfiha</span><strong>R$ 16,00</strong></li>
-                </ul>
-              </div>
-            </article>
-
-            <article class="menu-card">
-              <div class="menu-image menu-doces"></div>
-              <div class="menu-body">
-                <div class="menu-header">
-                  <h3>Doces</h3>
-                  <span>R$ 10 a R$ 22</span>
-                </div>
-                <p>Uma seleção irresistível para adoçar seu dia com qualidade.</p>
-                <ul>
-                  <li><span>Sonho</span><strong>R$ 14,00</strong></li>
-                  <li><span>Brigadeiro</span><strong>R$ 10,00</strong></li>
-                  <li><span>Quindim</span><strong>R$ 12,00</strong></li>
-                  <li><span>Brownie</span><strong>R$ 18,00</strong></li>
-                </ul>
-              </div>
-            </article>
-
-            <article class="menu-card">
-              <div class="menu-image menu-bebidas"></div>
-              <div class="menu-body">
-                <div class="menu-header">
-                  <h3>Refrigerantes</h3>
-                  <span>R$ 8 a R$ 14</span>
-                </div>
-                <p>Refrescância para acompanhar o melhor da sua pausa.</p>
-                <ul>
-                  <li><span>Coca-Cola lata</span><strong>R$ 8,00</strong></li>
-                  <li><span>Guaraná</span><strong>R$ 8,00</strong></li>
-                  <li><span>Sprite</span><strong>R$ 8,00</strong></li>
-                  <li><span>Fanta</span><strong>R$ 8,00</strong></li>
-                </ul>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section promo-section" id="promocoes">
-        <div class="container">
-          <div class="section-heading">
-            <span class="eyebrow eyebrow-dark">Promoções</span>
-            <h2>Ofertas pensadas para você aproveitar mais</h2>
-          </div>
-
-          <div class="promo-grid">
-            <article class="promo-card">
-              <h3>Combo 1</h3>
-              <div class="promo-price">R$ 24,00</div>
-              <p>1 coxinha + 1 bebida gelada + 1 sonho.</p>
-            </article>
-
-            <article class="promo-card featured">
-              <h3>Combo 2</h3>
-              <div class="promo-price">R$ 32,00</div>
-              <p>2 salgados + 2 doces + 2 refrigerantes.</p>
-            </article>
-
-            <article class="promo-card">
-              <h3>Combo 3</h3>
-              <div class="promo-price">R$ 39,00</div>
-              <p>Kit para compartilhar com opções variadas.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="cta">
-        <div class="container cta-inner">
-          <div>
-            <h2>Seu café favorito em Caieiras.</h2>
-            <p>Experimente o melhor dos salgados, doces e refrigerantes em um ambiente premium.</p>
-          </div>
-          <a href="#contato" class="btn btn-primary">Peça agora</a>
-        </div>
-      </section>
-
-      <section class="section contact-section" id="contato">
-        <div class="container">
-          <div class="section-heading">
-            <span class="eyebrow eyebrow-dark">Contato</span>
-            <h2>Fale com a gente</h2>
-          </div>
-
-          <div class="contact-grid">
-            <div class="contact-card info-card">
-              <h3>Informações</h3>
-              <ul>
-                <li><span>📍</span> Rua das Flores, 245 - Centro, Caieiras - SP</li>
-                <li><span>📞</span> (11) 98765-4321</li>
-                <li><span>⏰</span> Segunda a domingo • 7h às 22h</li>
-                <li><span>✉️</span> contato@cafevaranda.com.br</li>
-              </ul>
-            </div>
-
-            <div class="contact-card form-card">
-              <h3>Enviar mensagem</h3>
-              <form>
-                <label>
-                  Nome
-                  <input type="text" placeholder="Seu nome" />
-                </label>
-                <label>
-                  E-mail
-                  <input type="email" placeholder="seu@email.com" />
-                </label>
-                <label>
-                  Mensagem
-                  <textarea rows="5" placeholder="Escreva sua mensagem..."></textarea>
-                </label>
-                <button type="submit" class="btn btn-primary">Enviar</button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <a
-      class="whatsapp-float"
-      href="https://wa.me/5511987654321?text=Ol%C3%A1%2C%20quero%20fazer%20um%20pedido%20no%20Caf%C3%A9%20Varanda."
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Falar pelo WhatsApp"
-    >
-      WhatsApp
-    </a>
-
-    <footer class="footer">
-      <div class="container footer-inner">
-        <div class="brand footer-brand">
-          <span class="brand-mark">CV</span>
-          <span>Café Varanda</span>
-        </div>
-        <span>© 2026 Café Varanda. Todos os direitos reservados.</span>
-      </div>
-    </footer>
-  </body>
+  <a class="whatsapp-float" href="https://wa.me/5511987654321" target="_blank" rel="noopener">WhatsApp</a>
+  <footer class="footer"><div class="container footer-inner"><div class="brand"><span class="brand-mark">CV</span><span>Café Varanda</span></div><span>© 2026 Café Varanda. Todos os direitos reservados.</span></div></footer>
+  <script src="menu.js"></script>
+</body>
 </html>
